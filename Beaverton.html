@@ -86,7 +86,7 @@
 <div class="container" style="margin-top:30px; background-color: lightgray;">
   <h1 style="font-size:30px; padding-top: 20px;">B Beaverton and the Unknown Recipe</h1>
   <hr style="border: 3px solid #2E86C1;" />
-  <p> In this thrilling short story, Beaverton comes across a mysterious letter and must seek help to track down what it really means.</p>
+  <p> In this short story that also has chapters for some reason, Beaverton comes across a mysterious letter and must seek help to track down what it really means.</p>
   <div class="dropdown">
     <button class="dropbtn">Pick a Chapter</button>
     <div class="dropdown-content">
@@ -98,7 +98,8 @@
   </div>
   <hr id="chapLine" style="border: 3px solid #2E86C1;" />
   <div id= "chapContent" style="padding-top: 20px;">
-    <div id="contents" style="white-space: pre-wrap; padding-bottom: 20px;"></div>
+    <div id="contents" style="white-space: pre-wrap;"></div>
+    <hr id="endLine" style="border: 0px solid #2E86C1;" />
   </div>
 </div>
 </body>
@@ -108,8 +109,12 @@
 function loadChapter() {
   document.getElementById("chapLabel").innerHTML = "Chapter 1";
   document.getElementById("chapLine").style = "border: 1px solid #2E86C1;";
+  document.getElementById("chapContent").style = "padding-top: 20px; padding-bottom: 20px;";
   populatePre('chapters/Chapter1.txt');
+  
   //document.getElementById("chapContent").innerHTML = chapters/chapter1.html;
+  document.getElementById("contents").style = "white-space: pre-wrap; padding-bottom: 10px;";
+  document.getElementById("endLine").style = "border: 1px solid #2E86C1;";
 }
 
 function populatePre(url) {
